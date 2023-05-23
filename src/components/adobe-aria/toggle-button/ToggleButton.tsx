@@ -5,7 +5,11 @@ import { AriaToggleButtonProps, useToggleButton } from "react-aria";
 import "./ToggleButton.css";
 import classNames from "classnames";
 
-export const ToggleButon = (props: AriaToggleButtonProps<ElementType>) => {
+type ToggleButtonProps = AriaToggleButtonProps<ElementType> & {
+  size?: 'small' | 'large' 
+}
+
+export const ToggleButon = (props: ToggleButtonProps) => {
   const ref = useRef(null);
   const state = useToggleState(props);
   const { buttonProps, isPressed } = useToggleButton(props, state, ref);
@@ -15,6 +19,7 @@ export const ToggleButon = (props: AriaToggleButtonProps<ElementType>) => {
     toggleButtonPressed: isPressed && !isSelected,
     toggleButtonSelected: !isPressed && isSelected,
     toggleButtonPressedSelected: isPressed && isSelected,
+    toggleButtonLarge: props.size === 'large',
   })
 
   return (
