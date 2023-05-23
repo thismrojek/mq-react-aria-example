@@ -1,0 +1,30 @@
+.toggleButton {
+  align-self: center;
+  transition: 0.25s;
+  border: none;
+  background-color: white;
+  cursor: pointer;
+  padding: 4px 15px;
+  line-height: 1.5;
+  white-space: nowrap;
+  color: #e92b64;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.toggleButtonPressed {
+  background-color: #e92b64;
+  color: white;
+}
+
+.toggleButtonSelected {
+  background-color: #ff6c98;
+  color: white;
+}
+
+.toggleButtonPressedSelected {
+  background-color: #e92b64;
+  color: white;
+}
+
+
