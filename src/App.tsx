@@ -1,5 +1,6 @@
 import { AdobeAriaExample } from "./components/adobe-aria/AdobeAria";
 import { RadixUIExample } from "./components/radix-ui/RadixUIExample";
+import { ReachUIExample } from "./components/reach-ui/ReachUIExample";
 
 function App() {
   
@@ -9,6 +10,7 @@ function App() {
       <h1>Howdy, Miquido!</h1>
       <p>Przegląd Headless Components</p>
       <AdobeAriaExample />
+      <ReachUIExample />
       <RadixUIExample />
     </div>
   );
