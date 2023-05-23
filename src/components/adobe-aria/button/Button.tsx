@@ -1,9 +1,11 @@
 import { useRef } from "react";
-import { AriaButtonProps, mergeProps, useButton, useLongPress, usePress } from "react-aria";
+import { AriaButtonProps, LongPressProps, mergeProps, useButton, useLongPress, usePress } from "react-aria";
 
 import './Button.css';
 
-export const Button = (props: AriaButtonProps<"button">) => {
+type ButtonProps = AriaButtonProps<"button"> & LongPressProps;
+
+export const Button = (props: ButtonProps) => {
   const ref = useRef(null);
   const { buttonProps } = useButton(props, ref);
 
@@ -14,8 +16,7 @@ export const Button = (props: AriaButtonProps<"button">) => {
 
   let { longPressProps } = useLongPress({
     accessibilityDescription: 'Przytrzymaj, aby otworzyć menu...',
-    onLongPress: (e) => console.log(`long press with ${e.pointerType}`),
-    threshold: 1500
+    onLongPress: props.onLongPress
   });
 
   return (

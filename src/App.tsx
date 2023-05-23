@@ -1,20 +1,17 @@
-import { Button } from "./components/adobe-aria/button/Button";
-import { Input } from "./components/adobe-aria/input/Input";
-import { ToggleButon } from "./components/adobe-aria/toggle-button/ToggleButton";
+import { AdobeAriaExample } from "./components/adobe-aria/AdobeAria";
+import { MUIBaseExample } from "./components/mui-base/MUIBaseExample";
+import { RadixUIExample } from "./components/radix-ui/RadixUIExample";
 
 function App() {
+  
+
   return (
-    <div>
-      <header>Howdy, Miquido!</header>
-      <main>
-        <Button>Click me!</Button>
-        <ToggleButon size="large">Me too!</ToggleButon>
-        <Input
-          label="Your lovely name goes here..."
-          description="We wanna know you good..."
-          errorMessage="Komunikat błędu"
-        />
-      </main>
+    <div style={{ padding: 50, maxWidth: '35%' }}>
+      <h1>Howdy, Miquido!</h1>
+      <p>Przegląd Unstyled Component Libraries</p>
+      <AdobeAriaExample />
+      <MUIBaseExample />
+      <RadixUIExample />
     </div>
   );
 }
