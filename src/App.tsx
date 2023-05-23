@@ -7,7 +7,7 @@ function App() {
   return (
     <div style={{ padding: 50, maxWidth: '35%' }}>
       <h1>Howdy, Miquido!</h1>
-      <p>Przegląd Unstyled Component Libraries</p>
+      <p>Przegląd Headless Components</p>
       <AdobeAriaExample />
       <RadixUIExample />
     </div>
