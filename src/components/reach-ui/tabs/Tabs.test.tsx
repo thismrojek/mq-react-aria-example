@@ -25,6 +25,9 @@ describe("CustomTabs", () => {
       const tabTrigger = screen.getByTestId(`tab${tabs.indexOf(tab) + 1}`);
       expect(tabTrigger).toBeInTheDocument();
     });
+
+    const firstTabContentParent = screen.getByTestId("content1").parentElement;
+    expect(firstTabContentParent).not.toHaveAttribute("hidden");
   });
 
   it("switches tab content on click", () => {
