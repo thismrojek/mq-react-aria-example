@@ -17,8 +17,6 @@ export const Input = (props: AriaTextFieldProps) => {
     onKeyUp: (e) => console.log(`Key up: ${e.key}`),
   });
 
-  console.log(keyboardProps)
-
   return (
     <div className="inputWrapper">
       {/* CORE INPUT & LABEL */}

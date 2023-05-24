@@ -33,7 +33,7 @@ export const RadixUIExample = () => {
       <h3>Avatars</h3>
       <div style={{ display: "flex", gap: 16 }}>
         {users.map(({ alt, textFallback, src }) => (
-          <CustomAvatar alt={alt} src={src} textFallback={textFallback} />
+          <CustomAvatar key={src} alt={alt} src={src} textFallback={textFallback} />
         ))}
       </div>
 
