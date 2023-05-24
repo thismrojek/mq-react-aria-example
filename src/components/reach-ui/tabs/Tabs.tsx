@@ -1,4 +1,5 @@
 import { Tabs, TabList, Tab, TabPanels, TabPanel } from "@reach/tabs";
+import { randomUUID } from "crypto";
 import { FC, ReactNode } from "react";
 
 interface CustomTab {
@@ -18,12 +19,12 @@ export const CustomTabs: FC<CustomTabsProps> = ({ tabs }) => {
     <Tabs>
       <TabList>
         {tabList.map((node) => (
-          <Tab>{node}</Tab>
+          <Tab key={randomUUID()}>{node}</Tab>
         ))}
       </TabList>
       <TabPanels>
         {tabPanels.map((node) => (
-          <TabPanel>{node}</TabPanel>
+          <TabPanel key={randomUUID()}>{node}</TabPanel>
         ))}
       </TabPanels>
     </Tabs>
